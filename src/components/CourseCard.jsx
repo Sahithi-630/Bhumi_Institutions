@@ -7,6 +7,7 @@ import {
   Check, 
   GraduationCap, 
   Layers,
+  Clock,
   MessageCircle,
   BookOpen
 } from 'lucide-react';
@@ -48,15 +49,15 @@ export default function CourseCard({ course, onOpenEnquiry }) {
         {course.shortDescription}
       </p>
 
-      {/* Meta Specifications: Class, Level, Focus */}
+      {/* Meta Specifications: Class, Duration, Focus */}
       <div className="grid grid-cols-2 gap-2 my-4 py-2.5 px-3 rounded-xl bg-slate-950/60 border border-slate-800/80 text-xs text-slate-300">
         <div className="flex items-center gap-1.5">
           <GraduationCap className="w-3.5 h-3.5 text-blue-400 shrink-0" />
           <span><strong>For:</strong> {course.targetClasses}</span>
         </div>
         <div className="flex items-center gap-1.5">
-          <Layers className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-          <span><strong>Level:</strong> {course.level}</span>
+          <Clock className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+          <span><strong>Duration:</strong> 1 Week</span>
         </div>
         <div className="flex items-center gap-1.5 col-span-2 text-slate-400">
           <span><strong>Focus:</strong> <span className="text-slate-200">{course.focus}</span></span>

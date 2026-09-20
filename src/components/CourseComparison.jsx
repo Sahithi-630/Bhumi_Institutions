@@ -111,6 +111,10 @@ export default function CourseComparison() {
                 <div className="space-y-2.5 mb-6 flex-1 text-xs text-slate-300">
                   <div className="flex items-start gap-2">
                     <Check className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
+                    <span><strong>Duration:</strong> 1 Week (Live Bootcamp)</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
                     <span><strong>Eligibility:</strong> {col.classes}</span>
                   </div>
                   <div className="flex items-start gap-2">

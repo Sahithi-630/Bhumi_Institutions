@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="24" fill="#0B0F19"/>
+  <rect x="2" y="2" width="96" height="96" rx="22" stroke="url(#borderGlow)" stroke-width="3"/>
+  <path d="M26 30V70M26 50H46M46 30V70" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Leaf accent above -->
+  <path d="M60 26C60 26 74 24 76 38C76 48 64 54 60 54C60 54 62 40 60 26Z" fill="#F97316"/>
+  <path d="M54 36C54 36 64 34 65 44C65 51 57 55 54 55C54 55 55 45 54 36Z" fill="#FB923C" opacity="0.85"/>
+  <defs>
+    <linearGradient id="borderGlow" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B82F6"/>
+      <stop offset="0.5" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+  </defs>
+</svg>

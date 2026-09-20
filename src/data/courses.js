@@ -17,6 +17,8 @@ export const courses = [
     mode: "Live Interactive Online + Hands-On Workshops",
     focus: "Understanding AI",
     prerequisites: "No prior coding or technical knowledge required.",
+    price: 999,
+    priceFormatted: "₹999",
     certificate: "Official Bhumi Institutions Certificate of AI Literacy & Foundations",
     skills: ["AI Basics", "Prompting", "AI Safety", "Creativity", "Critical Thinking"],
     learningOutcomes: [
@@ -135,7 +137,7 @@ export const courses = [
   {
     id: "build-websites-with-ai",
     slug: "build-websites-with-ai",
-    title: "Build Websites with AI",
+    title: "Build Websites using AI",
     label: "CREATE",
     icon: "Globe",
     color: "from-blue-600 to-indigo-700",
@@ -150,6 +152,8 @@ export const courses = [
     mode: "Hands-on Project Lab (Online & Hybrid)",
     focus: "AI + Web Creation",
     prerequisites: "Basic familiarity with computers; no prior programming experience required.",
+    price: 999,
+    priceFormatted: "₹999",
     certificate: "Official Bhumi Institutions Web Development & AI Creator Certificate",
     skills: ["Web Development", "HTML & CSS", "AI Coding", "UI Design", "Deployment"],
     learningOutcomes: [
@@ -268,7 +272,7 @@ export const courses = [
   {
     id: "ai-basics-website-building",
     slug: "ai-basics-website-building",
-    title: "AI Basics + Website Building",
+    title: "AI Basics + Build Websites using AI",
     label: "COMPLETE TRACK",
     icon: "Layers",
     color: "from-blue-600 via-indigo-600 to-blue-700",
@@ -283,6 +287,8 @@ export const courses = [
     mode: "Comprehensive Masterclass (Live Online + Lab)",
     focus: "AI Foundations + Live Web Development",
     prerequisites: "Zero coding or prior technical knowledge required.",
+    price: 1499,
+    priceFormatted: "₹1,499",
     certificate: "Official Bhumi Institutions Master Certificate in AI Foundations & Web Development",
     skills: ["AI Basics", "Prompting", "Web Development", "HTML & CSS", "AI Coding", "Deployment", "Digital Safety"],
     learningOutcomes: [

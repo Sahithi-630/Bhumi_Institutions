@@ -21,9 +21,10 @@ export const siteConfig = {
     return `https://wa.me/918317518463?text=${encodeURIComponent(msg)}`;
   },
 
-  createCourseWhatsAppUrl: (courseTitle, studentClass = "") => {
+  createCourseWhatsAppUrl: (courseTitle, studentClass = "", fee = "") => {
     const classText = studentClass ? ` for Class ${studentClass}` : "";
-    const msg = `Hi Bhumi Institutions! I am interested in registering/enquiring about the "${courseTitle}" course${classText}. Please share the batch timings and details.`;
+    const feeText = fee ? ` (Fee: ${fee})` : "";
+    const msg = `Hi Bhumi Institutions! I am interested in registering/enquiring about the "${courseTitle}" course${feeText}${classText}. Please share the batch timings and details.`;
     return `https://wa.me/918317518463?text=${encodeURIComponent(msg)}`;
   }
 };

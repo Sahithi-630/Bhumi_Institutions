@@ -12,7 +12,7 @@ export const testimonials = [
     quote: "Building my first personal website using AI-assisted coding gave me a huge boost in confidence. Seeing my own live web link working on my smartphone was an unforgettable moment for me.",
     author: "Student, Class 9",
     relation: "Student Cohort Participant",
-    badge: "Build Websites with AI",
+    badge: "Build Websites using AI",
     initials: "AK"
   },
   {
@@ -20,7 +20,7 @@ export const testimonials = [
     quote: "As a parent, what impressed me most was the strong emphasis on ethics, safety, and using AI responsibly for school research rather than taking shortcuts. Highly structured and reassuring program.",
     author: "Parent of Class 10 Student",
     relation: "Parent Testimonial",
-    badge: "AI Basics + Website Building",
+    badge: "AI Basics + Build Websites using AI",
     initials: "SM"
   }
 ];

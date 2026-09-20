@@ -232,7 +232,7 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
                   >
                     {courses.map((c) => (
                       <option key={c.id} value={c.title}>
-                        {c.title}
+                        {c.title} ({c.priceFormatted})
                       </option>
                     ))}
                     <option value="Undecided / Needs Guidance">Undecided / Needs Guidance</option>

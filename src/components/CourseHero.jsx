@@ -45,7 +45,8 @@ export default function CourseHero({ course, onOpenEnquiry }) {
           </p>
 
           {/* Course Metadata Strip: Calm & Structured */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 my-6 p-4 rounded-xl bg-slate-900/70 border border-slate-800 text-xs">
+          {/* Course Metadata Strip: Calm & Structured */}
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 my-6 p-4 rounded-xl bg-slate-900/70 border border-slate-800 text-xs">
             <div className="space-y-0.5">
               <div className="flex items-center gap-1.5 text-slate-400">
                 <GraduationCap className="w-3.5 h-3.5 text-blue-400" />
@@ -77,6 +78,13 @@ export default function CourseHero({ course, onOpenEnquiry }) {
               </div>
               <p className="text-white font-bold text-sm">Live Interactive</p>
             </div>
+
+            <div className="space-y-0.5 col-span-2 sm:col-span-1 border-t sm:border-t-0 sm:border-l border-slate-800 pt-2 sm:pt-0 sm:pl-3">
+              <div className="flex items-center gap-1.5 text-emerald-400">
+                <span className="uppercase text-[10px] tracking-wider font-bold">Course Fee</span>
+              </div>
+              <p className="text-emerald-300 font-extrabold text-base font-heading">{course.priceFormatted}</p>
+            </div>
           </div>
 
           {/* CTA Buttons */}
@@ -86,11 +94,11 @@ export default function CourseHero({ course, onOpenEnquiry }) {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm"
             >
               <Send className="w-4 h-4" />
-              <span>Register / Enquire Now</span>
+              <span>Enroll / Enquire Now ({course.priceFormatted})</span>
             </button>
 
             <a
-              href={siteConfig.createCourseWhatsAppUrl(course.title, course.targetClasses)}
+              href={siteConfig.createCourseWhatsAppUrl(course.title, course.targetClasses, course.priceFormatted)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-medium text-emerald-300 bg-emerald-950/40 hover:bg-emerald-900/40 border border-emerald-800/50 transition-colors"

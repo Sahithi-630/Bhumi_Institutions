@@ -207,7 +207,7 @@ export default function EnquiryForm({ initialCourse = '' }) {
             >
               {courses.map((c) => (
                 <option key={c.id} value={c.title}>
-                  {c.title}
+                  {c.title} ({c.priceFormatted})
                 </option>
               ))}
               <option value="General Counselling / Unsure">General Counselling / Unsure</option>

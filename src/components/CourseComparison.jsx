@@ -8,6 +8,7 @@ export default function CourseComparison() {
       id: "ai-basics",
       slug: "ai-basics",
       title: "AI Basics",
+      price: "₹999",
       icon: Bot,
       bestFor: "Students completely new to AI.",
       focus: "Understanding AI.",
@@ -18,7 +19,8 @@ export default function CourseComparison() {
     {
       id: "build-websites-with-ai",
       slug: "build-websites-with-ai",
-      title: "Build Websites with AI",
+      title: "Build Websites using AI",
+      price: "₹999",
       icon: Globe,
       bestFor: "Students interested in technology and websites.",
       focus: "Creating websites.",
@@ -29,7 +31,8 @@ export default function CourseComparison() {
     {
       id: "ai-basics-website-building",
       slug: "ai-basics-website-building",
-      title: "AI Basics + Website Building",
+      title: "AI Basics + Build Websites using AI",
+      price: "₹1,499",
       icon: Cpu,
       bestFor: "Students wanting the full foundation to website creation pathway.",
       focus: "Comprehensive AI & Web Building.",
@@ -72,9 +75,17 @@ export default function CourseComparison() {
                   <Icon className="w-5 h-5" />
                 </div>
 
-                <h3 className="font-heading font-bold text-xl text-white mb-3">
+                <h3 className="font-heading font-bold text-xl text-white mb-2">
                   {col.title}
                 </h3>
+
+                {/* Course Fee Badge */}
+                <div className="flex items-baseline justify-between mb-4 pb-3 border-b border-slate-800">
+                  <span className="text-xs text-slate-400 font-medium">Course Fee:</span>
+                  <span className="text-xl font-heading font-extrabold text-emerald-400">
+                    {col.price}
+                  </span>
+                </div>
 
                 {/* Best For Block */}
                 <div className="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80 mb-3">

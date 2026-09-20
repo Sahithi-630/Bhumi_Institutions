@@ -83,25 +83,41 @@ export default function CourseCard({ course, onOpenEnquiry }) {
         </ul>
       </div>
 
-      {/* Action Buttons: Clean & Grounded */}
-      <div className="pt-4 border-t border-slate-800 space-y-2">
-        <Link
-          to={`/courses/${course.slug}`}
-          className="w-full py-2.5 px-4 rounded-xl font-semibold text-xs sm:text-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
-        >
-          <span>Explore Course</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
+      {/* Price & Action Buttons: Clean & Grounded */}
+      <div className="pt-4 border-t border-slate-800 space-y-3">
+        {course.priceFormatted && (
+          <div className="flex items-baseline justify-between pb-1">
+            <div className="flex items-baseline gap-1.5">
+              <span className="text-xs text-slate-400 font-medium">Fee:</span>
+              <span className="text-2xl font-heading font-extrabold text-white">
+                {course.priceFormatted}
+              </span>
+            </div>
+            <span className="text-[11px] font-medium text-emerald-400 bg-emerald-950/70 border border-emerald-800/40 px-2 py-0.5 rounded-md">
+              Full Program
+            </span>
+          </div>
+        )}
 
-        <a
-          href={siteConfig.createCourseWhatsAppUrl(course.title, course.targetClasses)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full py-2 px-3 rounded-xl font-medium text-xs text-emerald-300 hover:text-white bg-emerald-950/40 hover:bg-emerald-900/40 border border-emerald-800/40 transition-colors flex items-center justify-center gap-1.5"
-        >
-          <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
-          <span>Enquire on WhatsApp</span>
-        </a>
+        <div className="space-y-2">
+          <Link
+            to={`/courses/${course.slug}`}
+            className="w-full py-2.5 px-4 rounded-xl font-semibold text-xs sm:text-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
+          >
+            <span>Explore Course</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+
+          <a
+            href={siteConfig.createCourseWhatsAppUrl(course.title, course.targetClasses, course.priceFormatted)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full py-2 px-3 rounded-xl font-medium text-xs text-emerald-300 hover:text-white bg-emerald-950/40 hover:bg-emerald-900/40 border border-emerald-800/40 transition-colors flex items-center justify-center gap-1.5"
+          >
+            <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
+            <span>Enquire on WhatsApp</span>
+          </a>
+        </div>
       </div>
 
     </div>

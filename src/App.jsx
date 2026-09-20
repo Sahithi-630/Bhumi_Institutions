@@ -41,7 +41,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen bg-navy-950 text-slate-100 font-sans selection:bg-brand-blue selection:text-white">
+      <div className="flex flex-col min-h-screen w-full overflow-x-hidden bg-navy-950 text-slate-100 font-sans selection:bg-brand-blue selection:text-white">
         {/* Sticky Header */}
         <Navbar onOpenEnquiry={() => handleOpenEnquiry()} />
 

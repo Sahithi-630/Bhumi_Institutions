@@ -73,7 +73,7 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-navy-950/80 backdrop-blur-md overflow-y-auto animate-in fade-in duration-200">
-      <div className="relative w-full max-w-lg bg-navy-900 border border-slate-700/80 rounded-2xl shadow-2xl p-6 sm:p-8 my-8 text-left">
+      <div className="relative w-full max-w-lg max-h-[92vh] overflow-y-auto bg-navy-900 border border-slate-700/80 rounded-2xl shadow-2xl p-5 sm:p-8 my-auto text-left">
         
         {/* Close button */}
         <button

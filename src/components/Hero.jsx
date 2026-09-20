@@ -14,12 +14,12 @@ import { siteConfig } from '../data/siteConfig';
 
 export default function Hero({ onOpenEnquiry }) {
   return (
-    <section className="relative pt-32 pb-20 md:pt-36 md:pb-24 bg-navy-950 border-b border-slate-800/80">
+    <section className="relative pt-28 pb-14 sm:pt-32 sm:pb-20 md:pt-36 md:pb-24 bg-navy-950 border-b border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 items-center">
           
           {/* Left Column: Calm, Clear Educational Focus */}
-          <div className="lg:col-span-7 space-y-6 text-left">
+          <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-left">
             
             {/* Minimalist Top Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-slate-300 text-xs font-medium">
@@ -30,38 +30,38 @@ export default function Hero({ onOpenEnquiry }) {
             </div>
 
             {/* Main Heading */}
-            <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.15]">
+            <h1 className="font-heading font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.15]">
               Understand AI. <br />
               <span className="text-blue-400">Create with AI.</span> <br />
               Shape the Future.
             </h1>
 
             {/* Supporting Text */}
-            <p className="text-slate-300 text-base sm:text-lg font-normal leading-relaxed max-w-2xl">
+            <p className="text-slate-300 text-sm sm:text-lg font-normal leading-relaxed max-w-2xl">
               Helping students from <strong>Classes 6–12</strong> discover Artificial Intelligence, explore modern AI tools and build real-world projects.
             </p>
 
             {/* Reassuring Trust Points */}
-            <div className="flex flex-wrap items-center gap-5 text-xs sm:text-sm text-slate-400 pt-1">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-5 text-xs sm:text-sm text-slate-400 pt-1">
               <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-blue-400" />
+                <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0" />
                 <span>Zero Coding Prerequisite</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-blue-400" />
+                <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0" />
                 <span>Hands-On Capstones</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-blue-400" />
+                <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0" />
                 <span>Safe & Supervised</span>
               </div>
             </div>
 
-            {/* Actions: Clean, Solid, Settled Buttons */}
-            <div className="flex flex-wrap items-center gap-3.5 pt-2">
+            {/* Actions: Responsive Stacking on Mobile, Horizontal on Desktop */}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 pt-2">
               <a
                 href="#courses"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm w-full sm:w-auto text-center"
               >
                 <span>Explore Courses</span>
                 <ArrowRight className="w-4 h-4" />
@@ -69,7 +69,7 @@ export default function Hero({ onOpenEnquiry }) {
 
               <a
                 href="#learning-approach"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-medium text-slate-300 bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:text-white transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-medium text-slate-300 bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:text-white transition-colors w-full sm:w-auto text-center"
               >
                 <span>How It Works</span>
               </a>
@@ -78,9 +78,9 @@ export default function Hero({ onOpenEnquiry }) {
                 href={siteConfig.createWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-3 rounded-xl text-xs font-medium text-emerald-300 bg-emerald-950/40 hover:bg-emerald-900/40 border border-emerald-800/50 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-xs font-medium text-emerald-300 bg-emerald-950/40 hover:bg-emerald-900/40 border border-emerald-800/50 transition-colors w-full sm:w-auto text-center"
               >
-                <MessageCircle className="w-4 h-4 text-emerald-400" />
+                <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0" />
                 <span>WhatsApp: {siteConfig.whatsappFormatted}</span>
               </a>
             </div>
@@ -121,7 +121,7 @@ export default function Hero({ onOpenEnquiry }) {
               </div>
 
               {/* Study Modules Strip */}
-              <div className="mt-4 grid grid-cols-2 gap-3 text-left">
+              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-left">
                 <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
                   <div className="flex items-center gap-2 text-blue-400 font-semibold text-xs mb-1">
                     <BookOpen className="w-3.5 h-3.5" />
@@ -140,9 +140,9 @@ export default function Hero({ onOpenEnquiry }) {
               </div>
 
               {/* Calm Progress Indicator */}
-              <div className="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
-                <span>Learning Pathway: 4 Stages</span>
-                <span className="text-slate-300 font-medium">Understand → Explore → Create → Showcase</span>
+              <div className="mt-4 pt-3 border-t border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs text-slate-400">
+                <span className="text-[11px]">Learning Pathway: 4 Stages</span>
+                <span className="text-slate-300 font-medium text-[11px]">Understand → Explore → Create → Showcase</span>
               </div>
 
             </div>

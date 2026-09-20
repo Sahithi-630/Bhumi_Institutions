@@ -24,21 +24,21 @@ export default function CurriculumAccordion({ curriculum }) {
             {/* Accordion Header */}
             <button
               onClick={() => toggleModule(index)}
-              className="w-full px-6 py-5 flex items-center justify-between gap-4 text-left font-heading"
+              className="w-full px-4 py-4 sm:px-6 sm:py-5 flex items-center justify-between gap-3 sm:gap-4 text-left font-heading"
               aria-expanded={isExpanded}
             >
-              <div className="flex items-center gap-3.5">
-                <span className="font-mono text-xs font-bold px-2.5 py-1 rounded-md bg-slate-800 text-brand-blue border border-slate-700">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3.5">
+                <span className="font-mono text-[11px] sm:text-xs font-bold px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-slate-800 text-blue-400 border border-slate-700 w-fit">
                   {item.module}
                 </span>
-                <h4 className="font-bold text-base sm:text-lg text-white">
+                <h4 className="font-bold text-sm sm:text-lg text-white leading-snug">
                   {item.title}
                 </h4>
               </div>
 
               <div
-                className={`w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center shrink-0 transition-transform duration-300 ${
-                  isExpanded ? 'rotate-180 bg-brand-blue text-white' : 'text-slate-400'
+                className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-slate-800 flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                  isExpanded ? 'rotate-180 bg-blue-600 text-white' : 'text-slate-400'
                 }`}
               >
                 <ChevronDown className="w-4 h-4" />
@@ -47,7 +47,7 @@ export default function CurriculumAccordion({ curriculum }) {
 
             {/* Accordion Body */}
             {isExpanded && (
-              <div className="px-6 pb-6 pt-2 border-t border-slate-800/80 space-y-4 animate-in fade-in duration-200">
+              <div className="px-4 pb-5 pt-2 sm:px-6 sm:pb-6 border-t border-slate-800/80 space-y-4 animate-in fade-in duration-200">
                 {/* Topics Covered */}
                 <div className="space-y-2">
                   <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block">

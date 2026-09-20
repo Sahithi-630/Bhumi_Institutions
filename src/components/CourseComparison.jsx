@@ -68,7 +68,7 @@ export default function CourseComparison() {
             return (
               <div
                 key={col.id}
-                className="flex flex-col p-6 sm:p-7 rounded-2xl bg-slate-900/60 border border-slate-800 text-left"
+                className="flex flex-col p-5 sm:p-7 rounded-2xl bg-slate-900/60 border border-slate-800 text-left"
               >
                 {/* Header */}
                 <div className="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700/60 flex items-center justify-center mb-4 text-blue-400">

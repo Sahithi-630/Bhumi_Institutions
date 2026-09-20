@@ -27,7 +27,7 @@ export default function CourseCard({ course, onOpenEnquiry }) {
   };
 
   return (
-    <div className="flex flex-col h-full rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-slate-700 p-6 text-left transition-colors duration-200">
+    <div className="flex flex-col h-full rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-slate-700 p-5 sm:p-6 text-left transition-colors duration-200">
       
       {/* Top Row: Icon + Calm Label Badge */}
       <div className="flex items-center justify-between gap-2 mb-4">

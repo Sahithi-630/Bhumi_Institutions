@@ -39,7 +39,7 @@ export default function CourseDetailPage({ onOpenEnquiry }) {
       <CourseHero course={course} onOpenEnquiry={onOpenEnquiry} />
 
       {/* Main Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 space-y-14 sm:space-y-20">
         
         {/* 2. What You Will Learn (Section 11) */}
         <section>

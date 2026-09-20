@@ -12,7 +12,7 @@ import { siteConfig } from '../data/siteConfig';
 
 export default function CourseHero({ course, onOpenEnquiry }) {
   return (
-    <section className="relative pt-32 pb-14 md:pt-36 md:pb-20 bg-navy-950 text-left border-b border-slate-800/80">
+    <section className="relative pt-28 pb-12 sm:pt-32 sm:pb-16 md:pt-36 md:pb-20 bg-navy-950 text-left border-b border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl">
           
@@ -35,48 +35,47 @@ export default function CourseHero({ course, onOpenEnquiry }) {
           </h1>
 
           {/* Tagline */}
-          <p className="text-lg sm:text-xl text-blue-400 font-medium mt-2">
+          <p className="text-base sm:text-xl text-blue-400 font-medium mt-2">
             {course.tagline}
           </p>
 
           {/* Description */}
-          <p className="text-slate-300 text-sm sm:text-base leading-relaxed mt-3 max-w-3xl font-normal">
+          <p className="text-slate-300 text-xs sm:text-base leading-relaxed mt-3 max-w-3xl font-normal">
             {course.description}
           </p>
 
-          {/* Course Metadata Strip: Calm & Structured */}
-          {/* Course Metadata Strip: Calm & Structured */}
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 my-6 p-4 rounded-xl bg-slate-900/70 border border-slate-800 text-xs">
+          {/* Course Metadata Strip: Responsive Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3 my-5 sm:my-6 p-3.5 sm:p-4 rounded-xl bg-slate-900/70 border border-slate-800 text-xs">
             <div className="space-y-0.5">
               <div className="flex items-center gap-1.5 text-slate-400">
-                <GraduationCap className="w-3.5 h-3.5 text-blue-400" />
+                <GraduationCap className="w-3.5 h-3.5 text-blue-400 shrink-0" />
                 <span className="uppercase text-[10px] tracking-wider font-semibold">Eligibility</span>
               </div>
-              <p className="text-white font-bold text-sm">{course.targetClasses}</p>
+              <p className="text-white font-bold text-xs sm:text-sm">{course.targetClasses}</p>
             </div>
 
             <div className="space-y-0.5">
               <div className="flex items-center gap-1.5 text-slate-400">
-                <Layers className="w-3.5 h-3.5 text-slate-400" />
+                <Layers className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                 <span className="uppercase text-[10px] tracking-wider font-semibold">Level</span>
               </div>
-              <p className="text-white font-bold text-sm">{course.level}</p>
+              <p className="text-white font-bold text-xs sm:text-sm">{course.level}</p>
             </div>
 
             <div className="space-y-0.5">
               <div className="flex items-center gap-1.5 text-slate-400">
-                <Clock className="w-3.5 h-3.5 text-slate-400" />
+                <Clock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                 <span className="uppercase text-[10px] tracking-wider font-semibold">Duration</span>
               </div>
-              <p className="text-white font-bold text-sm">{course.duration.split('•')[0]}</p>
+              <p className="text-white font-bold text-xs sm:text-sm">{course.duration.split('•')[0]}</p>
             </div>
 
             <div className="space-y-0.5">
               <div className="flex items-center gap-1.5 text-slate-400">
-                <Laptop className="w-3.5 h-3.5 text-blue-400" />
+                <Laptop className="w-3.5 h-3.5 text-blue-400 shrink-0" />
                 <span className="uppercase text-[10px] tracking-wider font-semibold">Format</span>
               </div>
-              <p className="text-white font-bold text-sm">Live Interactive</p>
+              <p className="text-white font-bold text-xs sm:text-sm">Live Interactive</p>
             </div>
 
             <div className="space-y-0.5 col-span-2 sm:col-span-1 border-t sm:border-t-0 sm:border-l border-slate-800 pt-2 sm:pt-0 sm:pl-3">
@@ -87,11 +86,11 @@ export default function CourseHero({ course, onOpenEnquiry }) {
             </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center gap-3 pt-1">
+          {/* CTA Buttons: Responsive Stacking */}
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 pt-1">
             <button
               onClick={() => onOpenEnquiry && onOpenEnquiry(course.title)}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm w-full sm:w-auto"
             >
               <Send className="w-4 h-4" />
               <span>Enroll / Enquire Now ({course.priceFormatted})</span>
@@ -101,9 +100,9 @@ export default function CourseHero({ course, onOpenEnquiry }) {
               href={siteConfig.createCourseWhatsAppUrl(course.title, course.targetClasses, course.priceFormatted)}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-medium text-emerald-300 bg-emerald-950/40 hover:bg-emerald-900/40 border border-emerald-800/50 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-medium text-emerald-300 bg-emerald-950/40 hover:bg-emerald-900/40 border border-emerald-800/50 transition-colors w-full sm:w-auto"
             >
-              <MessageCircle className="w-4 h-4 text-emerald-400" />
+              <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0" />
               <span>Chat on WhatsApp ({siteConfig.whatsappFormatted})</span>
             </a>
           </div>

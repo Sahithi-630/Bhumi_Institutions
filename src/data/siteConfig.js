@@ -26,5 +26,30 @@ export const siteConfig = {
     const feeText = fee ? ` (Fee: ${fee})` : "";
     const msg = `Hi Bhumi Institutions! I am interested in registering/enquiring about the "${courseTitle}" course${feeText}${classText}. Please share the batch timings and details.`;
     return `https://wa.me/918317518463?text=${encodeURIComponent(msg)}`;
+  },
+
+  createEnquiryWhatsAppUrl: (data) => {
+    const text = `*New Admission Enquiry - Bhumi Institutions*\n\n` +
+      `👤 *Student Name:* ${data.studentName || 'Not specified'}\n` +
+      `👨‍👩‍👦 *Parent / Guardian:* ${data.parentName || 'Not specified'}\n` +
+      `🏫 *Class / Grade:* ${data.studentClass || 'Class 8'}\n` +
+      `📚 *Course Interested:* ${data.course || 'AI Courses'}\n` +
+      `📱 *Contact Phone:* ${data.phone || 'Not specified'}\n` +
+      `📧 *Email:* ${data.email || 'Not provided'}\n` +
+      `💬 *Query / Note:* ${data.message || 'Please provide details on batches and admissions.'}\n\n` +
+      `Thank you! Looking forward to your guidance.`;
+    return `https://wa.me/918317518463?text=${encodeURIComponent(text)}`;
+  }
+};
+
+export const openWhatsApp = (url) => {
+  if (typeof window === 'undefined') return;
+  try {
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+    if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+      window.location.href = url;
+    }
+  } catch (e) {
+    window.location.href = url;
   }
 };

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Send, MessageCircle, CheckCircle2, Sparkles } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { courses } from '../data/courses';
-import { siteConfig } from '../data/siteConfig';
+import { siteConfig, openWhatsApp } from '../data/siteConfig';
 
 export default function EnquiryForm({ initialCourse = '' }) {
   const [formData, setFormData] = useState({
@@ -24,22 +24,17 @@ export default function EnquiryForm({ initialCourse = '' }) {
 
   const handleWhatsAppDirect = (e) => {
     e.preventDefault();
-    const text = `*New Admission Enquiry - Bhumi Institutions*\n` +
-      `• *Student Name:* ${formData.studentName || 'Not specified'}\n` +
-      `• *Parent Name:* ${formData.parentName || 'Not specified'}\n` +
-      `• *Grade:* ${formData.studentClass}\n` +
-      `• *Course Interested:* ${formData.course}\n` +
-      `• *Phone:* ${formData.phone || 'Not specified'}\n` +
-      `• *Email:* ${formData.email || 'Not specified'}\n` +
-      `• *Message:* ${formData.message || 'Please provide details on batches and admissions.'}`;
-
-    const url = `https://wa.me/918317518463?text=${encodeURIComponent(text)}`;
-    window.open(url, '_blank');
+    const waUrl = siteConfig.createEnquiryWhatsAppUrl(formData);
+    openWhatsApp(waUrl);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    // Immediately pass the message into WhatsApp
+    const waUrl = siteConfig.createEnquiryWhatsAppUrl(formData);
+    openWhatsApp(waUrl);
 
     setTimeout(() => {
       setIsSubmitting(false);
@@ -51,31 +46,32 @@ export default function EnquiryForm({ initialCourse = '' }) {
           origin: { y: 0.6 }
         });
       } catch (err) {}
-    }, 600);
+    }, 400);
   };
 
   if (submitted) {
+    const waUrl = siteConfig.createEnquiryWhatsAppUrl(formData);
     return (
       <div className="p-8 sm:p-10 rounded-3xl bg-navy-900/90 border border-emerald-500/40 text-center space-y-5 shadow-2xl">
         <div className="w-16 h-16 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto border border-emerald-500/30">
           <CheckCircle2 className="w-10 h-10" />
         </div>
         <h3 className="font-heading font-bold text-2xl sm:text-3xl text-white">
-          Enquiry Submitted Successfully!
+          Enquiry Sent to WhatsApp!
         </h3>
         <p className="text-slate-300 text-sm sm:text-base max-w-md mx-auto leading-relaxed">
-          Thank you for reaching out to <strong>Bhumi Institutions</strong>. Our counselor will review your enquiry for <strong>{formData.studentName || 'your child'}</strong> and connect within 24 hours.
+          Thank you! We have opened WhatsApp with your admission enquiry for <strong>{formData.studentName || 'your child'}</strong>. If WhatsApp did not open automatically, please click below to send.
         </p>
 
         <div className="pt-4 space-y-3 max-w-sm mx-auto">
           <a
-            href={siteConfig.createCourseWhatsAppUrl(formData.course, formData.studentClass)}
+            href={waUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 w-full py-3.5 px-5 rounded-xl font-semibold text-emerald-300 bg-emerald-950/80 hover:bg-emerald-900/90 border border-emerald-600/50 shadow-lg shadow-emerald-950/40 transition-all text-sm"
           >
             <MessageCircle className="w-5 h-5 text-emerald-400" />
-            <span>Chat Directly on WhatsApp Now</span>
+            <span>Open WhatsApp Chat ({siteConfig.whatsappFormatted})</span>
           </a>
 
           <button
@@ -235,10 +231,10 @@ export default function EnquiryForm({ initialCourse = '' }) {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="flex-1 py-3 px-6 rounded-xl font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 text-sm"
+            className="flex-1 py-3 px-6 rounded-xl font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 text-sm shadow-md"
           >
             <Send className="w-4 h-4" />
-            <span>{isSubmitting ? 'Submitting Enquiry...' : 'Submit Enquiry'}</span>
+            <span>{isSubmitting ? 'Opening WhatsApp...' : 'Submit Enquiry (Open WhatsApp)'}</span>
           </button>
 
           <button
@@ -247,7 +243,7 @@ export default function EnquiryForm({ initialCourse = '' }) {
             className="py-3 px-5 rounded-xl font-medium text-emerald-300 bg-emerald-950/40 hover:bg-emerald-900/40 border border-emerald-800/50 transition-colors flex items-center justify-center gap-2 text-sm"
           >
             <MessageCircle className="w-4 h-4 text-emerald-400" />
-            <span>Send Directly on WhatsApp</span>
+            <span>Chat Directly on WhatsApp</span>
           </button>
         </div>
 

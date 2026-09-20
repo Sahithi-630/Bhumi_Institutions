@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { X, Send, MessageCircle, CheckCircle2, Sparkles, BookOpen } from 'lucide-react';
 import confetti from 'canvas-confetti';
-import { siteConfig } from '../data/siteConfig';
+import { siteConfig, openWhatsApp } from '../data/siteConfig';
 import { courses } from '../data/courses';
 
 export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }) {
@@ -33,23 +33,18 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
 
   const handleWhatsAppDirect = (e) => {
     e.preventDefault();
-    const text = `*New Admission Enquiry - Bhumi Institutions*\n` +
-      `• *Student Name:* ${formData.studentName || 'Not provided'}\n` +
-      `• *Parent/Guardian:* ${formData.parentName || 'Not provided'}\n` +
-      `• *Grade/Class:* ${formData.studentClass}\n` +
-      `• *Course Interested:* ${formData.course}\n` +
-      `• *Contact Number:* ${formData.phone || 'Not provided'}\n` +
-      `• *Email:* ${formData.email || 'Not provided'}\n` +
-      `• *Note:* ${formData.message || 'I would like to know batch details and enrollment steps.'}`;
-
-    const url = `https://wa.me/918317518463?text=${encodeURIComponent(text)}`;
-    window.open(url, '_blank');
+    const waUrl = siteConfig.createEnquiryWhatsAppUrl(formData);
+    openWhatsApp(waUrl);
     onClose();
   };
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    // Immediately pass the message into WhatsApp
+    const waUrl = siteConfig.createEnquiryWhatsAppUrl(formData);
+    openWhatsApp(waUrl);
 
     setTimeout(() => {
       setIsSubmitting(false);
@@ -63,7 +58,7 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
       } catch (err) {
         // Safe fallback
       }
-    }, 600);
+    }, 400);
   };
 
   const handleReset = () => {
@@ -90,21 +85,21 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
               <CheckCircle2 className="w-10 h-10" />
             </div>
             <h3 className="font-heading font-bold text-2xl text-white">
-              Enquiry Received!
+              Enquiry Transferred to WhatsApp!
             </h3>
             <p className="text-slate-300 text-sm leading-relaxed max-w-sm mx-auto">
-              Thank you for reaching out to <strong>Bhumi Institutions</strong>. Our academic team will get in touch via WhatsApp / Phone within 24 hours.
+              Your enquiry details for <strong>{formData.studentName || 'your child'}</strong> have been opened in WhatsApp ({siteConfig.whatsappFormatted}).
             </p>
 
             <div className="pt-4 space-y-2.5">
               <a
-                href={siteConfig.createCourseWhatsAppUrl(formData.course, formData.studentClass)}
+                href={siteConfig.createEnquiryWhatsAppUrl(formData)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl text-sm font-semibold text-emerald-300 bg-emerald-950/80 border border-emerald-600/50 hover:bg-emerald-900/80 transition-all shadow-lg shadow-emerald-950/30"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>Follow Up Immediately on WhatsApp</span>
+                <span>Re-open WhatsApp Chat</span>
               </a>
 
               <button
@@ -273,20 +268,20 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex-1 py-2.5 px-5 rounded-xl font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 text-sm"
+                  className="flex-1 py-2.5 px-5 rounded-xl font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 text-sm shadow-md"
                 >
                   <Send className="w-4 h-4" />
-                  <span>{isSubmitting ? 'Sending...' : 'Submit Enquiry'}</span>
+                  <span>{isSubmitting ? 'Opening WhatsApp...' : 'Submit Enquiry (Open WhatsApp)'}</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={handleWhatsAppDirect}
                   className="py-2.5 px-4 rounded-xl font-medium text-emerald-300 bg-emerald-950/40 hover:bg-emerald-900/40 border border-emerald-800/50 transition-colors flex items-center justify-center gap-2 text-sm"
-                  title="Send via WhatsApp"
+                  title="Direct WhatsApp Chat"
                 >
                   <MessageCircle className="w-4 h-4 text-emerald-400" />
-                  <span>Send via WhatsApp</span>
+                  <span>Chat on WhatsApp</span>
                 </button>
               </div>
             </form>

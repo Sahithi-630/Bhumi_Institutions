@@ -13,7 +13,7 @@ import TestimonialsSection from '../components/TestimonialsSection';
 import FAQAccordion from '../components/FAQAccordion';
 import CTASection from '../components/CTASection';
 import { courses } from '../data/courses';
-import { Sparkles, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function HomePage({ onOpenEnquiry }) {
   return (
@@ -52,38 +52,10 @@ export default function HomePage({ onOpenEnquiry }) {
 
           {/* Courses Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {courses.slice(0, 3).map((course) => (
+            {courses.map((course) => (
               <CourseCard key={course.id} course={course} onOpenEnquiry={onOpenEnquiry} />
             ))}
           </div>
-
-          {/* 4th Course Banner: Clean & Grounded */}
-          {courses.length > 3 && (
-            <div className="mt-8 p-6 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 text-left">
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-semibold text-xs border border-slate-700">
-                    NEW COURSE
-                  </span>
-                  <span className="text-xs text-slate-400">Classes 7–12</span>
-                </div>
-                <h3 className="font-heading font-bold text-xl text-white">
-                  {courses[3].title}
-                </h3>
-                <p className="text-slate-300 text-xs sm:text-sm mt-1 max-w-xl">
-                  {courses[3].shortDescription}
-                </p>
-              </div>
-
-              <Link
-                to={`/courses/${courses[3].slug}`}
-                className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 transition-colors"
-              >
-                <span>Explore Game Dev</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          )}
 
           {/* Bottom Catalog Link */}
           <div className="mt-12 text-center">

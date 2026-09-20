@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { 
   Bot, 
   Globe, 
-  Cpu, 
-  Gamepad2, 
   ArrowRight, 
   Check, 
   GraduationCap, 
@@ -21,10 +19,8 @@ export default function CourseCard({ course, onOpenEnquiry }) {
         return <Bot className="w-5 h-5 text-blue-400" />;
       case 'build-websites-with-ai':
         return <Globe className="w-5 h-5 text-blue-400" />;
-      case 'ai-tools-mastery':
-        return <Cpu className="w-5 h-5 text-blue-400" />;
-      case 'ai-game-development':
-        return <Gamepad2 className="w-5 h-5 text-blue-400" />;
+      case 'ai-basics-website-building':
+        return <Layers className="w-5 h-5 text-blue-400" />;
       default:
         return <BookOpen className="w-5 h-5 text-blue-400" />;
     }

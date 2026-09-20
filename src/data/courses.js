@@ -138,8 +138,8 @@ export const courses = [
     title: "Build Websites with AI",
     label: "CREATE",
     icon: "Globe",
-    color: "from-purple-600 to-indigo-700",
-    glowColor: "rgba(139, 92, 246, 0.4)",
+    color: "from-blue-600 to-indigo-700",
+    glowColor: "rgba(59, 130, 246, 0.4)",
     tagline: "Turn creative concepts into real, published websites using AI-assisted coding.",
     shortDescription: "Learn how to turn ideas into real websites using AI-powered development tools.",
     description: "Empower students to become digital creators rather than just consumers. Students learn how the web functions under the hood, how HTML & CSS work together, and how modern AI tools can generate, debug, and refine real code, culminating in a live published website they can share with family, teachers, and friends.",
@@ -266,279 +266,145 @@ export const courses = [
     ]
   },
   {
-    id: "ai-tools-mastery",
-    slug: "ai-tools-mastery",
-    title: "AI Tools Mastery",
-    label: "EXPLORE",
-    icon: "Cpu",
-    color: "from-cyan-500 via-blue-600 to-indigo-700",
-    glowColor: "rgba(6, 182, 212, 0.4)",
-    tagline: "Discover how AI tool categories power modern research, writing, design, and study habits.",
-    shortDescription: "Discover how different AI tools can help you learn, create, research, design and solve problems.",
-    description: "Instead of binding students to individual tools that change every month, this masterclass teaches students the durable mental models, categories, and practical workflows of the modern AI ecosystem. Students learn how to supercharge their academic research, visual presentations, storytelling, and study efficiency.",
+    id: "ai-basics-website-building",
+    slug: "ai-basics-website-building",
+    title: "AI Basics + Website Building",
+    label: "COMPLETE TRACK",
+    icon: "Layers",
+    color: "from-blue-600 via-indigo-600 to-blue-700",
+    glowColor: "rgba(59, 130, 246, 0.4)",
+    tagline: "The comprehensive journey: from fundamental AI principles to building and publishing live websites.",
+    shortDescription: "Master core Artificial Intelligence concepts, prompt engineering, and then apply those skills to design, code, and deploy real websites.",
+    description: "Our flagship comprehensive program combining conceptual AI foundations with hands-on web creation. Students begin by demystifying how artificial intelligence works, mastering precision prompt engineering, and discovering generative tools. They then translate that knowledge into real-world creation: writing HTML & CSS, using AI code assistants, styling responsive pages, and launching their own live websites on the internet.",
     targetClasses: "Classes 6–12",
     classGroups: ["6-7", "8-10", "11-12"],
-    level: "Beginner",
-    duration: "4 Weeks • 8 Interactive Sessions",
-    mode: "Interactive Lab Workshops",
-    focus: "AI Tools & Productivity",
-    prerequisites: "Comfortable browsing the internet and typing.",
-    certificate: "Official Bhumi Institutions AI Productivity & Multi-Tool Mastery Certificate",
-    skills: ["AI Tools", "Productivity", "Research", "Creativity", "Presentation"],
-    learningOutcomes: [
-      {
-        pillar: "Understand",
-        title: "The AI Tool Ecosystem",
-        description: "Master the overarching taxonomy of AI tools—from LLMs and image synthesizers to automated research and audio tools.",
-        icon: "Layers"
-      },
-      {
-        pillar: "Explore",
-        title: "9 Core Tool Categories",
-        description: "Gain hands-on familiarity across study, writing, research, image, presentation, video, design, coding, and productivity tools.",
-        icon: "Sliders"
-      },
-      {
-        pillar: "Create",
-        title: "Multi-Tool Workflows",
-        description: "Chain multiple AI tools together: research a topic → generate an outline → craft visuals → assemble a presentation.",
-        icon: "Workflow"
-      },
-      {
-        pillar: "Present",
-        title: "Critical Evaluation",
-        description: "Demonstrate high standards of truthfulness, originality, proper source citation, and ethical digital creation.",
-        icon: "CheckCircle2"
-      }
-    ],
-    toolCategories: [
-      { name: "AI Study Tools", desc: "Interactive explanation, practice problems, concept flashcards, and language practice." },
-      { name: "AI Writing Tools", desc: "Brainstorming outlines, drafting creative stories, editing grammar, and tone calibration." },
-      { name: "AI Research Tools", desc: "Exploring scientific discoveries, summarizing lengthy texts, and finding verifiable sources." },
-      { name: "AI Image Tools", desc: "Generating bespoke illustrations, concept art, book covers, and visual metaphors." },
-      { name: "AI Presentation Tools", desc: "Structuring pitch decks, designing slide layouts, and generating speaking talking points." },
-      { name: "AI Video Tools", desc: "Script-to-storyboard generation, avatar synthesis, and caption automation." },
-      { name: "AI Design Tools", desc: "Color palette harmonies, logo ideation, poster generation, and UI mockups." },
-      { name: "AI Coding Tools", desc: "Translating logic to code, debugging mistakes, and generating algorithm explanations." },
-      { name: "AI Productivity Tools", desc: "Task planning, study schedule optimization, and notes summarization." }
-    ],
-    curriculum: [
-      {
-        module: "Module 01",
-        title: "The Modern AI Landscape & Architecture",
-        topics: [
-          "Understanding why AI tools exist in categories",
-          "Input vs. Output: text-to-text, text-to-image, speech-to-text, multi-modal",
-          "The superpower of combining tools rather than relying on one"
-        ],
-        activity: "Mapping the student's weekly study routine to identify AI productivity opportunities"
-      },
-      {
-        module: "Module 02",
-        title: "AI for Academic Research & Deep Learning",
-        topics: [
-          "How to safely research complex school subjects with AI",
-          "Digesting difficult academic papers or dense chapters into clear analogies",
-          "Cross-checking AI statements against trusted encyclopedias and textbooks"
-        ],
-        activity: "Creating a comprehensive study dossier on a cutting-edge science topic"
-      },
-      {
-        module: "Module 03",
-        title: "Creative Writing & Story Crafting Workflows",
-        topics: [
-          "Overcoming blank-page anxiety with structured brainstorming",
-          "Character development, plot pacing, and dialogue polishing",
-          "Maintaining student voice and original creative authorship"
-        ],
-        activity: "Drafting an original sci-fi or historical fiction narrative with AI brainstorming"
-      },
-      {
-        module: "Module 04",
-        title: "Visual & Design AI Tools",
-        topics: [
-          "Prompt engineering for visual generation: lighting, style, composition, camera angles",
-          "Designing logos, educational posters, and school banners",
-          "Visual consistency across multiple generations"
-        ],
-        activity: "Designing a full visual brand identity for an imaginary futuristic school club"
-      },
-      {
-        module: "Module 05",
-        title: "Presentation & Multimedia Synthesis",
-        topics: [
-          "Transforming written outlines into structured slide decks",
-          "AI-assisted presentation design and public speaking notes",
-          "Exploring video scriptwriting and automated caption generation"
-        ],
-        activity: "Creating an engaging 5-slide interactive presentation deck on Climate Innovations"
-      },
-      {
-        module: "Module 06",
-        title: "Multi-Tool Capstone Workflow Project",
-        topics: [
-          "Chaining 4 tools together in a single pipeline",
-          "Refining, fact-checking, and styling the final output",
-          "Peer review and mentor guidance"
-        ],
-        activity: "Building a multi-media educational package (Report + Infographic + Slides)"
-      },
-      {
-        module: "Module 07",
-        title: "Showcase, Ethics & Future Horizons",
-        topics: [
-          "Presenting student capstone workflows to parents and peers",
-          "Ethical digital citizenship and future AI career trends",
-          "Course completion recognition"
-        ],
-        activity: "Live student presentation of their multi-tool workflow and certificate award"
-      }
-    ],
-    sampleProjects: [
-      {
-        title: "Multimedia Science Documentary Deck",
-        description: "A complete research report, slide deck, and visual diagrams explaining black holes or genetic engineering."
-      },
-      {
-        title: "Interactive Storybook with Custom Art",
-        description: "A 5-chapter illustrated book with storyline, character dialogues, and AI-assisted cover artwork."
-      },
-      {
-        title: "Personal AI Study Workflow System",
-        description: "A personalized study automation dashboard that creates chapter summaries and custom practice question sets."
-      }
-    ]
-  },
-  {
-    id: "ai-game-development",
-    slug: "ai-game-development",
-    title: "AI Game & Logic Development",
-    label: "NEW",
-    icon: "Gamepad2",
-    color: "from-amber-500 via-orange-600 to-red-600",
-    glowColor: "rgba(249, 115, 22, 0.4)",
-    tagline: "Build playable 2D games, logic puzzles, and interactive quests with AI assistance.",
-    shortDescription: "Design interactive game worlds, player logic, and visual assets using modern AI game creation workflows.",
-    description: "Featured as Bhumi Institutions' newest high-demand offering! Students channel their natural enthusiasm for gaming into foundational programming and logical thinking. With AI accelerating asset creation and code generation, students build genuine playable games.",
-    targetClasses: "Classes 7–12",
-    classGroups: ["8-10", "11-12"],
     level: "Beginner → Intermediate",
-    duration: "6 Weeks • 12 Interactive Sessions",
-    mode: "Interactive Game Lab (Online & Hybrid)",
-    focus: "AI + Game Logic & Creative Coding",
-    prerequisites: "Enthusiasm for gaming and creative thinking; no prior coding required.",
-    certificate: "Official Bhumi Institutions Game Developer & AI Logic Certificate",
-    skills: ["Game Development", "Logic & Loops", "AI Sprites", "Interactive Storytelling", "Physics"],
+    duration: "8 Weeks • 16 Interactive Sessions",
+    mode: "Comprehensive Masterclass (Live Online + Lab)",
+    focus: "AI Foundations + Live Web Development",
+    prerequisites: "Zero coding or prior technical knowledge required.",
+    certificate: "Official Bhumi Institutions Master Certificate in AI Foundations & Web Development",
+    skills: ["AI Basics", "Prompting", "Web Development", "HTML & CSS", "AI Coding", "Deployment", "Digital Safety"],
     learningOutcomes: [
       {
         pillar: "Understand",
-        title: "Game Architecture & Logic",
-        description: "Learn how the game loop works, how coordinates control movement, and how conditionals trigger game events.",
-        icon: "Binary"
+        title: "AI & Web Fundamentals",
+        description: "Understand both machine learning principles and the anatomy of how web browsers, servers, and HTML/CSS work.",
+        icon: "Lightbulb"
       },
       {
         pillar: "Explore",
-        title: "AI Asset & Sound Generation",
-        description: "Generate retro sprites, background textures, storyline dialogues, and sound effect concepts using AI prompt workflows.",
-        icon: "Image"
+        title: "Prompting & AI Coding Tools",
+        description: "Master multi-modal prompt crafting, conversational AI workflows, and modern AI code generation assistants.",
+        icon: "Compass"
       },
       {
         pillar: "Create",
-        title: "Playable 2D Web Games",
-        description: "Code player mechanics, scoreboards, enemy obstacles, powerups, and win/loss states with AI coding assistance.",
-        icon: "Gamepad"
+        title: "A Complete Functional Website",
+        description: "Turn ideas into responsive, beautifully styled web pages, personal student portfolios, and interactive web projects.",
+        icon: "Layout"
       },
       {
         pillar: "Present",
-        title: "Playtesting & Sharing",
-        description: "Host your game on a shareable link, conduct playtests with friends and parents, and present your game design choices.",
-        icon: "Trophy"
+        title: "Live Deployment & Demo Day",
+        description: "Publish your website to a live public URL, conduct peer review, and present your complete creation in the Bhumi Showcase.",
+        icon: "Share2"
       }
     ],
     curriculum: [
       {
         module: "Module 01",
-        title: "How Games Think: The Game Loop & Mechanics",
+        title: "Foundations of Artificial Intelligence",
         topics: [
-          "What makes a game fun: rules, goals, obstacles, and feedback",
-          "The core game loop: Update, Render, Repeat",
-          "Deconstructing classic arcade hits (Pong, Flappy Bird, Snake)"
+          "Demystifying AI: How machines recognize patterns and learn from data",
+          "AI in everyday life: recommendation engines, search, and voice assistants",
+          "Understanding the difference between traditional software and AI models"
         ],
-        activity: "Mapping game logic flowcharts on paper and in prompt prompts"
+        activity: "AI Detective: Auditing algorithms and smart technology around us"
       },
       {
         module: "Module 02",
-        title: "Generating Game Assets with AI",
+        title: "Generative AI & Modern Creative Tools",
         topics: [
-          "Prompting for 2D character sprites, backgrounds, and UI icons",
-          "Creating game sound effects and background ambiance using AI audio tools",
-          "Organizing game asset folders"
+          "How text and image generative models work under the hood",
+          "Exploring creative multi-modal AI generation safely and responsibly",
+          "Understanding hallucinations, bias, and truth verification"
         ],
-        activity: "Generating an original game protagonist, enemy sprite, and game over screen"
+        activity: "Creating your first AI-assisted concept art and character narrative"
       },
       {
         module: "Module 03",
-        title: "AI-Assisted Game Coding: Movement & Controls",
+        title: "Prompt Engineering Mastery",
         topics: [
-          "Arrow keys, WASD controls, touch input, and velocity",
-          "Using AI prompts to write smooth player movement code",
-          "Screen boundaries and collision detection"
+          "The science of prompt engineering: roles, context, and constraints",
+          "Iterative refinement: transforming vague ideas into precise outputs",
+          "Using AI as a personalized study and brainstorming partner"
         ],
-        activity: "Building a playable spaceship or character moving smoothly on screen"
+        activity: "Prompt Arena: Crafting the ultimate precision prompt system"
       },
       {
         module: "Module 04",
-        title: "Obstacles, Enemies & Score Logic",
+        title: "Anatomy of the Web: HTML & CSS Basics",
         topics: [
-          "Spawning randomized obstacles and collectibles",
-          "Tracking player scores, high scores, and health bars",
-          "Tuning game difficulty: speed ramps and level progression"
+          "How websites load on computers and mobile devices",
+          "HTML structure: headings, paragraphs, images, links, and buttons",
+          "CSS styling: colors, typography, layout hierarchy, and spacing"
         ],
-        activity: "Adding falling stars and dodging asteroids to the game world"
+        activity: "Building your first handcrafted webpage from scratch"
       },
       {
         module: "Module 05",
-        title: "Level Design & Interactive Story Dialogues",
+        title: "AI-Powered Code Generation & Layouts",
         topics: [
-          "Crafting branching story choices and NPC conversations with AI",
-          "Designing multi-stage levels with increasing challenges",
-          "Victory celebrations and game replay loops"
+          "Writing clear technical prompts to generate clean HTML & CSS",
+          "Asking AI to explain complex code and troubleshoot layout glitches",
+          "Responsive mobile design: Flexbox and Grid made simple"
         ],
-        activity: "Adding level 2 boss challenges and interactive victory text"
+        activity: "Using AI to generate a responsive multi-column feature section"
       },
       {
         module: "Module 06",
-        title: "Polishing, Debugging & Sound Integration",
+        title: "Building Your Capstone Project Website",
         topics: [
-          "Juice your game: screen shakes, particle trails, and sound triggers",
-          "Troubleshooting glitchy physics and jump behaviors with AI",
-          "Testing on mobile browsers vs. laptop keyboards"
+          "Planning an original student website: wireframing and structure",
+          "Assembling navigation, hero sections, project galleries, and contact forms",
+          "Pairing AI generation with human creative taste and polish"
         ],
-        activity: "Conducting peer playtesting sessions and recording feedback"
+        activity: "Developing all pages of your personalized capstone website"
       },
       {
         module: "Module 07",
-        title: "Game Showcase & Play Arcade",
+        title: "Debugging, Polishing & Deploying Live",
         topics: [
-          "Publishing your playable game on a live shareable URL",
-          "Creating a mini game poster and teaser pitch",
-          "The Bhumi Student Arcade Showcase with parents and peers"
+          "Finding and fixing layout bugs with AI assistance",
+          "Publishing to a free, secure live web host with your own shareable URL",
+          "Mobile browser verification and performance checks"
         ],
-        activity: "Live game demo festival where students play each other's creations"
+        activity: "Deploying your website live on the internet"
+      },
+      {
+        module: "Module 08",
+        title: "Final Showcase & Master Certification",
+        topics: [
+          "Presenting your live website and AI workflows to parents and peers",
+          "Reflecting on your learning curve and future technological horizons",
+          "Awarding the Bhumi Institutions Master Certificate"
+        ],
+        activity: "Live demo presentation and graduation ceremony"
       }
     ],
     sampleProjects: [
       {
-        title: "Space Dodger 2D Arcade",
-        description: "A fast-paced arcade game where players steer an AI-generated starship through planetary debris fields."
+        title: "Personal Student Portfolio Website",
+        description: "A complete, published personal portfolio showcasing academic achievements, creative projects, and future aspirations."
       },
       {
-        title: "Mythical Quest: Interactive Story RPG",
-        description: "A text-and-visual adventure game with branching decisions written with prompt engineering."
+        title: "Interactive AI Science & Knowledge Hub",
+        description: "An educational web portal featuring AI-assisted research explanations, diagrams, and responsive learning cards."
       },
       {
-        title: "Classroom Quiz Rush Game",
-        description: "A timed trivia dash game where players navigate questions generated from school science topics."
+        title: "School Club / Community Initiative Portal",
+        description: "A live multi-page website built for a school club, environmental initiative, or student campaign."
       }
     ]
   }
@@ -554,11 +420,10 @@ export const filterOptions = {
   skills: [
     { label: "All Skills", value: "all" },
     { label: "AI Basics", value: "AI Basics" },
-    { label: "AI Tools", value: "AI Tools" },
     { label: "Web Development", value: "Web Development" },
-    { label: "Game Development", value: "Game Development" },
-    { label: "Creativity", value: "Creativity" },
-    { label: "Productivity", value: "Productivity" }
+    { label: "Prompting", value: "Prompting" },
+    { label: "HTML & CSS", value: "HTML & CSS" },
+    { label: "AI Coding", value: "AI Coding" }
   ],
   levels: [
     { label: "All Levels", value: "all" },

@@ -27,15 +27,15 @@ export default function CourseComparison() {
       keyTakeaway: "A live published website created with HTML, CSS & AI coding tools.",
     },
     {
-      id: "ai-tools-mastery",
-      slug: "ai-tools-mastery",
-      title: "AI Tools Mastery",
+      id: "ai-basics-website-building",
+      slug: "ai-basics-website-building",
+      title: "AI Basics + Website Building",
       icon: Cpu,
-      bestFor: "Students who want to explore different AI applications.",
-      focus: "AI tools and productivity.",
+      bestFor: "Students wanting the full foundation to website creation pathway.",
+      focus: "Comprehensive AI & Web Building.",
       classes: "Classes 6–12",
-      idealStudent: "Wants to boost school research, presentations, writing, and design.",
-      keyTakeaway: "Mastery over 9 AI categories and multi-tool workflow pipelines.",
+      idealStudent: "Wants to learn how AI works and immediately build & publish real websites.",
+      keyTakeaway: "Complete mastery of AI prompting plus a live deployed capstone website.",
     }
   ];
 

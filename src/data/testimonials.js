@@ -20,7 +20,7 @@ export const testimonials = [
     quote: "As a parent, what impressed me most was the strong emphasis on ethics, safety, and using AI responsibly for school research rather than taking shortcuts. Highly structured and reassuring program.",
     author: "Parent of Class 10 Student",
     relation: "Parent Testimonial",
-    badge: "AI Tools Mastery",
+    badge: "AI Basics + Website Building",
     initials: "SM"
   }
 ];

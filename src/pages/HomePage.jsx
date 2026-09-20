@@ -21,13 +21,7 @@ export default function HomePage({ onOpenEnquiry }) {
       {/* 1. Hero Section */}
       <Hero onOpenEnquiry={onOpenEnquiry} />
 
-      {/* 2. Trust / Introduction Strip */}
-      <TrustStrip />
-
-      {/* 3. About Bhumi Institutions */}
-      <AboutSnippet />
-
-      {/* 4. Courses — Main Section (Most Important Section) */}
+      {/* 2. Courses — Main Section (Directly after Hero) */}
       <section id="courses" className="py-20 bg-navy-950 border-b border-slate-800/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -70,6 +64,12 @@ export default function HomePage({ onOpenEnquiry }) {
 
         </div>
       </section>
+
+      {/* 3. Trust / Introduction Strip */}
+      <TrustStrip />
+
+      {/* 4. About Bhumi Institutions */}
+      <AboutSnippet />
 
       {/* 5. Learning Approach: 4-Step Framework */}
       <LearningApproach />
